@@ -7,6 +7,9 @@
     "web": "expo start --web",
     "eject": "expo eject"
   },
+  "rnpm": {
+    "assets": ["./assets/fonts/ExpoArabicMedium.ttf"]
+},
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/bottom-tabs": "^5.11.11",
@@ -28,4 +31,5 @@
     "@babel/core": "^7.9.0"
   },
   "private": true
+  
 }
