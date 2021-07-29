@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground, ScrollView } from 'react-native';
 import bg from '../assets/TAEWAKALNA_BG.png'
 import avatar from '../assets/user.png'
 import qr from '../assets/qr-code.png'
@@ -47,17 +47,50 @@ export default function Home() {
  <Image />
 </View>
 <View style={styles.servicesDetails}>
+  <ScrollView horizontal={true} style={{width: "90%"}}>
 
+  <View style={styles.boxContainer}>
+              <TouchableOpacity>
+               <View style={styles.box}>
+               <Image style={styles.logo} source={require('../assets/icons/active/QrCode.png')}></Image>
+               <Text style={styles.serviceName}> باركود زيارد تجمع</Text>  
+               </View>
+               </TouchableOpacity>
+           </View>
+<View style={styles.boxContainer}>
+              <TouchableOpacity>
+               <View style={styles.box}>
+               <Image style={styles.logo} source={require('../assets/icons/active/Test.png')}></Image>
+               <Text style={styles.serviceName}> فحص كورونا</Text>  
+               </View>
+               </TouchableOpacity>
+           </View>
 
-
+<View style={styles.boxContainer}>
+              <TouchableOpacity>
+               <View style={styles.box}>
+               <Image style={styles.logo} source={require('../assets/icons/active/id.png')}></Image>
+               <Text style={styles.serviceName}> بطاقة الوضع الصحي</Text>  
+               </View>
+               </TouchableOpacity>
+           </View>
            <View style={styles.boxContainer}>
+              <TouchableOpacity>
+               <View style={styles.box}>
+               <Image style={styles.logo} source={require('../assets/icons/active/familySponsored.png')}></Image>
+               <Text style={styles.serviceName}> بطاقة الوضع الصحي</Text>  
+               </View>
+               </TouchableOpacity>
+           </View>
+
+           {/* <View style={styles.boxContainer}>
               <TouchableOpacity>
                <View style={styles.box}>
                <Image style={styles.logo} source={require('../assets/icons/active/mobileNumber.png')}></Image>
                <Text style={styles.serviceName}> تعريف رقم الجوال</Text>  
                </View>
                </TouchableOpacity>
-           </View>
+           </View> */}
            
            <View style={styles.boxContainer}>
               <TouchableOpacity>
@@ -83,6 +116,7 @@ export default function Home() {
                </View>
                </TouchableOpacity>
            </View>
+  </ScrollView>
 </View>
       </View>
     </View>
@@ -252,7 +286,6 @@ const styles = StyleSheet.create({
   servicesDetails:
   {
     flexDirection:'row',
-    width: 90
   },
   background: {
     position: 'absolute',
