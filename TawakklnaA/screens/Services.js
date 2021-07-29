@@ -95,7 +95,7 @@ export default function Services() {
                </TouchableOpacity>
                <TouchableOpacity>
                <View style={styles.box}>
-               <Image style={styles.logo} source={require("../assets/icons/active/madrasatyPlatform.png")}></Image>
+               <Image style={{height:40,width:80,alignSelf:"center",marginTop:25}} source={require("../assets/icons/active/madrasatyPlatform.png")}></Image>
                  <Text style={styles.serviceName}>بيانات منصة مدرستي</Text>  
                </View>
                </TouchableOpacity>
@@ -159,7 +159,6 @@ const styles = StyleSheet.create({
       height:45,
       width:45,
       alignSelf:"center",
-      justifyContent:"center",
       marginTop:25,
   },
     serviceName:{
