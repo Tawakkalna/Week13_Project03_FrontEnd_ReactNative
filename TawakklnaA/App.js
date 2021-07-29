@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Image, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./screens/Home";
@@ -13,26 +13,40 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
+        tabBarOptions={{
+          activeTintColor: "#23AA9C",
+          inactiveTintColor: "#516477",
+        }}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
             if (route.name === "Home") {
               iconName = focused
-                ? "ios-information-circle"
-                : "ios-information-circle-outline";
+                ? require("./assets/icons/active/home.png")
+                : require("./assets/icons/notActive/home.png");
             } else if (route.name === "Profile") {
-              iconName = focused ? "ios-list-box" : "ios-list";
+              iconName = focused
+                ? require("./assets/icons/active/myAccount.png")
+                : require("./assets/icons/notActive/myAccount.png");
             } else if (route.name === "Services") {
-              iconName = focused ? "ios-list-box" : "ios-list";
+              iconName = focused
+                ? require("./assets/icons/active/services.png")
+                : require("./assets/icons/notActive/services.png");
             } else if (route.name === "Dashboard") {
-              iconName = focused ? "ios-list-box" : "ios-list";
+              iconName = focused
+                ? require("./assets/icons/active/dashboard.png")
+                : require("./assets/icons/notActive/dashboard.png");
             } else if (route.name === "Wallet") {
-              iconName = focused ? "ios-list-box" : "ios-list";
+              iconName = focused
+                ? require("./assets/icons/active/wallet.png")
+                : require("./assets/icons/notActive/wallet.png");
             }
 
             // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={color} />;
+            return (
+              <Image source={iconName} style={{ width: 25, height: 25 }} />
+            );
           },
         })}
         tabBarOptions={{
