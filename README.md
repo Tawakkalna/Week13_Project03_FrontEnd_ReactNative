@@ -1,41 +1,123 @@
-# Week13_Project03_FrontEnd_ReactNative
+<h1 align="center">
+<a href=""><img src="https://iconape.com/wp-content/files/uv/378514/svg/378514.svg" alt="Tawakkalna Logo" width="80"/></a>
+</br>
 
+<a href="https://gittuwaiq.netlify.app/">GitTuwaiq: Web-based GUI for Git</a>
 
-<div dir="rtl" align="right">
+</h1>
+<h4 align="center">Web-based graphical interface for distributed version control system Git.</h4>
 
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#license">License</a> •
+  <a href="https://gittuwaiq.netlify.app/">Live</a>
+</p>
 
-# فكرة المشروع: 
+<p align="center">
+  <a href="https://gittuwaiq.netlify.app/"><img src="https://raw.githubusercontent.com/YounesAlturkey/gittuwaiq/main/files/GitTuwaiq.gif" alt="demo"/></a>
+</p>
 
-المشاركة كمجموعتين مكونة من ٢٥ متدرب في بناء تطبيق “توكلنا”، مطلوب إنشاء موقع وتطبيق باستخدام Vue و ReactNative بنفس الوظائف
+<br/>
 
+<div id="key-features">
 
-# المتطلبات:
-- استخدام إطار العمل Vue لنسخة الويب
-- استخدام ReactNative لنسخة الموبايل
-- عمل Documentation لدور كل عضو بالفريق ومهامه
-- استخدام أداة Trello في عمل إدارة الفريق 
-- Product Manager
-- Web leader
-- Mobile Leader
-- Developers 
+## Key Features
 
+- Secure
+- Fast
+- Flexible
 
-# التسليم
+</div>
+<br/>
 
-- نهاية يوم الأحد 2020/08/01
--  رابط Github
-- ملفين Documentation لكل مشروع
-- عمل Presentations لكل مشروع 
- 
+<div id="how-to-use">
 
+## How To Use
 
-# الاضافة Bonus: 
-- أي تحسين في تجربة المستخدم UX/UI للموقع والتطبيق
--  استخدام ASP.NET 
-- استخدام API QR Code
-- استخدام Agile software development
-- عمل host على AWS او Azure
-- استخدام  اللغة العربي و الانجليزية
+From your command line:
 
+#### # Clone this repository
 
-https://drive.google.com/drive/folders/1qAvzaCp8HlqNU6_tycwKbckwKm_KWPJ2?usp=sharing
+```bash
+git clone https://github.com/YounesAlturkey/gittuwaiq.git
+```
+
+#### # Go into the frontend directory
+
+```bash
+cd gittuwaiq/frontend
+```
+
+#### # Install the dependencies
+
+```bash
+npm install
+```
+
+#### # Run the app
+
+```bash
+npm start
+```
+
+</div>
+
+<br/>
+
+<div id="tech-stack">
+
+## Tech Stack
+
+### <a href="https://gittuwaiq-api.azurewebsites.net/swagger/index.html">Backend</a>
+
+- .NET Core 5 Web API
+- Entity Framework - Code First Approach
+- Microsoft SQL Database
+
+### <a href="https://gittuwaiq.netlify.app/">Frontend</a>
+
+- React
+
+### Core Dependencies
+
+- [LibGit2Sharp](https://github.com/libgit2/libgit2sharp)
+
+</div>
+
+<br/>
+
+<div id="license">
+
+<br/>
+
+## License
+
+[MIT](https://github.com/YounesAlturkey/gittuwaiq/blob/main/files/LICENSE.md)
+
+</div>
+
+<br/>
+
+## Developers
+
+> Riyad Alghamdi ➝ [@1Riyad](https://github.com/1Riyad)
+
+> Adel Kalu ➝ [@AdelKalu](https://github.com/AdelKalu)
+
+> Faisal Alsagri ➝ [@FaisalAlsagri](https://github.com/FaisalAlsagri)
+
+> Ibrahim Alobaysi ➝ [@ibra0022](https://github.com/ibra0022)
+
+> Abdullah AL Haif ➝ [@Abdullah-ALHaif](https://github.com/Abdullah-ALHaif)
+
+> Abdulmajeed Almaymuni ➝ [@Abdulmajeed-Almaymuni](https://github.com/Abdulmajeed-Almaymuni)
+
+> Mansour Aldundur ➝ [@aldundur-Mansour](https://github.com/aldundur-Mansour)
+
+> Abdulrahman Bin Maneea ➝ [@AWManeea](https://github.com/AWManeea)
+
+> Younes Alturkey ➝ [@younes-alturkey](https://github.com/younes-alturkey)
+
+</div>
