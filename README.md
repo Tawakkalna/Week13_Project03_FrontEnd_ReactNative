@@ -78,19 +78,13 @@ npm start
 
 </div>
 
-<br/>
-
 <div id="license">
-
-<br/>
 
 ## License
 
 [MIT]()
 
 </div>
-
-<br/>
 
 ## Developers
 
