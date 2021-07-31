@@ -82,7 +82,7 @@ npm start
 
 ## License
 
-[MIT]()
+[Open Source License ➝ MIT](https://github.com/Tawakkalna/react-native/blob/main/LICENSE.md)
 
 </div>
 
