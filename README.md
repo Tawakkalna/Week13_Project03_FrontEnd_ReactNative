@@ -2,7 +2,7 @@
 <a href=""><img src="https://raw.githubusercontent.com/Tawakkalna/react-native/main/TawakklnaA/assets/logo.png" alt="Tawakkalna Logo" width="256"/></a>
 </br>
 
-<a href="">Tawakkalna: React Native</a>
+<a href="#">Tawakkalna: React Native</a>
 
 </h1>
 <h4 align="center">Tawakkalna mobile app frontend using React Native</h4>
