@@ -9,7 +9,7 @@ import imageBG from '../assets/imageBG.png'
 import twLogo from '../assets/twLogo.png'
 import sdaiaLogo from '../assets/sdaiaLogo.png'
 
-export default function Login() {
+export default function Login({navigation}) {
     return (
         <View style={{ flex: 1, backgroundColor: "black" }}>
             <View style={styles.logosContainer}>
@@ -53,7 +53,7 @@ export default function Login() {
 
             <View style={styles.loginContainer} >
                 <Text style={styles.loginlabel}>ليس لديك حساب؟   <Text style={styles.signupLabel}>تسجيل جديد </Text> </Text>
-                <TouchableOpacity style={styles.loginNext}>
+                <TouchableOpacity style={styles.loginNext} onPress={() => navigation.navigate("Main")}>
                     <Text style={styles.nextText}>التالي </Text>
                 </TouchableOpacity>
             </View>
@@ -63,7 +63,7 @@ export default function Login() {
 }
 const styles = StyleSheet.create({
     logosContainer: {
-        flex: 1.5,
+        flex: 1.1,
         alignItems: 'flex-end',
         justifyContent: "center",
         display: "flex",
@@ -156,9 +156,8 @@ const styles = StyleSheet.create({
     },
 
     loginContainer: {
-        flex: 1.5,
-        alignItems: "center",
-        justifyContent: "center"
+        flex: 1.6,
+        alignItems: "center"
     },
     loginlabel: {
         color: 'white',
@@ -177,6 +176,7 @@ const styles = StyleSheet.create({
         width: "85%",
         height: 50,
         alignItems: "center",
+        marginTop:7,
         justifyContent: "center"
     },
     nextText: {
