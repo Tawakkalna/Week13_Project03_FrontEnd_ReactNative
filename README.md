@@ -1,5 +1,5 @@
 <h1 align="center">
-<a href=""><img src="https://sajahotels.com/wp-content/uploads/2020/11/Tawakkalna-Logo_1920px-580x420.png" alt="Tawakkalna Logo" width="80"/></a>
+<a href=""><img src="https://raw.githubusercontent.com/Tawakkalna/react-native/main/TawakklnaA/assets/logo.png" alt="Tawakkalna Logo" width="256"/></a>
 </br>
 
 <a href="">Tawakkalna: React Native</a>
