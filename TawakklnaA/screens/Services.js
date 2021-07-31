@@ -165,14 +165,15 @@ const styles = StyleSheet.create({
         flex:1,
         color:"white",
         marginTop:20,
-        fontSize:18,
-        alignSelf:"center",
+        fontSize:17,
         alignItems:"center",
+        textAlign:"center"
     },
     service:{
         color:"#6b6a6b",
         alignSelf:"flex-end",
         fontSize:25,
+        marginRight:10,
     },
     boxContainer:{
     flexDirection:"row-reverse",

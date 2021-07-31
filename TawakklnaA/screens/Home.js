@@ -1,291 +1,341 @@
-import React from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground, ScrollView } from 'react-native';
+import React from 'react'
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  ImageBackground,
+  ScrollView,
+  Dimensions,
+} from 'react-native'
 import bg from '../assets/TAEWAKALNA_BG.png'
 import avatar from '../assets/user.png'
 import qr from '../assets/qr-code.png'
 import alarm from '../assets/icons/active/alarm.png'
 import refresh from '../assets/icons/active/refresh.png'
 import arrow from '../assets/icons/active/next.png'
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from 'expo-linear-gradient'
 
 export default function Home() {
+  const window = Dimensions.get('window')
+  const ratio = window.width / 500
+
   return (
-    <View style={styles.container}>    
-      <Image source={alarm } style={styles.alarm}/>
+    <ScrollView contentContainerStyle={styles.container}>
+      <Image source={alarm} style={styles.alarm} />
       <View style={styles.wrapper}>
-     <View style={styles.profileContainer}>
-     <ImageBackground source={bg} style={styles.profile} imageStyle={{borderRadius:10}} resizeMode="cover">
-     <Image source={avatar} style={styles.avatarImage} />
-     <Text style={styles.userName}>في العتيبي</Text>
-     </ImageBackground>
-     </View>
-     <LinearGradient
-        // Background Linear Gradient
-        colors={['rgb(6,74,34)', 'rgb(12,107,51)']}
-         style={styles.card}
-      > 
-     {/* <View style={styles.refreshIcon}></View> */}
-     <Image source={refresh} style={styles.refreshIcon}/>
-       <View style={styles.cardText}>
-         <Text style={styles.textHead}>محصًن</Text>
-         <Text style={styles.textDetails}>أكمل جرعات لقاح كورونا (كوفيد-19)</Text>
-         <Text style={styles.UpdateDetails}>آخر تحديث الاربعاء 28 يوليو، 10:35 ص</Text>
-       </View>
-       <Image source={qr} style={styles.qrImage} />
-       </LinearGradient>
-     <View style={styles.services}>
-     <View style={styles.showAll}>
-         <Image source={arrow} style={styles.servicesIcon}/>
-         <Text style={styles.textShowAll}>عرض الكل</Text>
-       </View>
-       <Text style={styles.textHeadColor}>الخدمات الحديثة</Text>
-     </View>
-     <View  style={styles.icons}>
- <Image />
- <Image />
- <Image />
- <Image />
-</View>
-<View style={styles.servicesDetails}>
-  <ScrollView horizontal={true} style={{width: "90%"}}>
+        <View style={styles.profileContainer}>
+          <ImageBackground
+            source={bg}
+            style={{
+              width: window.width - 25,
+              height: ratio * 333,
+            }}
+            imageStyle={{ borderRadius: 10 }}
+            resizeMode="cover"
+          >
+            <Image source={avatar} style={styles.avatarImage} />
+            <Text style={styles.userName}>فيّ العتيبي</Text>
+          </ImageBackground>
+        </View>
+        <LinearGradient
+          // Background Linear Gradient
+          colors={['rgb(6,74,34)', 'rgb(12,107,51)']}
+          style={styles.card}
+        >
+          {/* <View style={styles.refreshIcon}></View> */}
+          <Image source={refresh} style={styles.refreshIcon} />
+          <View style={styles.cardText}>
+            <Text style={styles.textHead}>محصًن</Text>
+            <Text style={styles.textDetails}>
+              أكمل جرعات لقاح كورونا (كوفيد-19)
+            </Text>
+            <Text style={styles.UpdateDetails}>
+              آخر تحديث الاربعاء 28 يوليو، 10:35 ص
+            </Text>
+          </View>
+          <Image source={qr} style={styles.qrImage} />
+        </LinearGradient>
+        <View style={styles.services}>
+          <View style={styles.showAll}>
+            <Image source={arrow} style={styles.servicesIcon} />
+            <Text style={styles.textShowAll}>عرض الكل</Text>
+          </View>
+          <Text style={styles.textHeadColor}>الخدمات الحديثة</Text>
+        </View>
+        <View style={styles.icons}>
+          <Image />
+          <Image />
+          <Image />
+          <Image />
+        </View>
+        <View style={styles.servicesDetails}>
+          <ScrollView horizontal={true} style={{ width: '90%' }}>
+            <View style={styles.boxContainer}>
+              <TouchableOpacity>
+                <View style={styles.box}>
+                  <Image
+                    style={styles.logo}
+                    source={require('../assets/icons/active/QrCode.png')}
+                  ></Image>
+                  <Text style={styles.serviceName}> باركود زيارد تجمع</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.boxContainer}>
+              <TouchableOpacity>
+                <View style={styles.box}>
+                  <Image
+                    style={styles.logo}
+                    source={require('../assets/icons/active/Test.png')}
+                  ></Image>
+                  <Text style={styles.serviceName}> فحص كورونا</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
 
-  <View style={styles.boxContainer}>
+            <View style={styles.boxContainer}>
               <TouchableOpacity>
-               <View style={styles.box}>
-               <Image style={styles.logo} source={require('../assets/icons/active/QrCode.png')}></Image>
-               <Text style={styles.serviceName}> باركود زيارد تجمع</Text>  
-               </View>
-               </TouchableOpacity>
-           </View>
-<View style={styles.boxContainer}>
+                <View style={styles.box}>
+                  <Image
+                    style={styles.logo}
+                    source={require('../assets/icons/active/id.png')}
+                  ></Image>
+                  <Text style={styles.serviceName}> بطاقة الوضع الصحي</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.boxContainer}>
               <TouchableOpacity>
-               <View style={styles.box}>
-               <Image style={styles.logo} source={require('../assets/icons/active/Test.png')}></Image>
-               <Text style={styles.serviceName}> فحص كورونا</Text>  
-               </View>
-               </TouchableOpacity>
-           </View>
+                <View style={styles.box}>
+                  <Image
+                    style={styles.logo}
+                    source={require('../assets/icons/active/familySponsored.png')}
+                  ></Image>
+                  <Text style={styles.serviceName}> بطاقة الوضع الصحي</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
 
-<View style={styles.boxContainer}>
-              <TouchableOpacity>
-               <View style={styles.box}>
-               <Image style={styles.logo} source={require('../assets/icons/active/id.png')}></Image>
-               <Text style={styles.serviceName}> بطاقة الوضع الصحي</Text>  
-               </View>
-               </TouchableOpacity>
-           </View>
-           <View style={styles.boxContainer}>
-              <TouchableOpacity>
-               <View style={styles.box}>
-               <Image style={styles.logo} source={require('../assets/icons/active/familySponsored.png')}></Image>
-               <Text style={styles.serviceName}> بطاقة الوضع الصحي</Text>  
-               </View>
-               </TouchableOpacity>
-           </View>
+            {/* <View style={styles.boxContainer}>
+        <TouchableOpacity>
+         <View style={styles.box}>
+         <Image style={styles.logo} source={require('../assets/icons/active/mobileNumber.png')}></Image>
+         <Text style={styles.serviceName}> تعريف رقم الجوال</Text>  
+         </View>
+         </TouchableOpacity>
+     </View> */}
 
-           {/* <View style={styles.boxContainer}>
+            <View style={styles.boxContainer}>
               <TouchableOpacity>
-               <View style={styles.box}>
-               <Image style={styles.logo} source={require('../assets/icons/active/mobileNumber.png')}></Image>
-               <Text style={styles.serviceName}> تعريف رقم الجوال</Text>  
-               </View>
-               </TouchableOpacity>
-           </View> */}
-           
-           <View style={styles.boxContainer}>
+                <View style={styles.box}>
+                  <Image
+                    style={styles.logo}
+                    source={require('../assets/icons/active/Vaccine.png')}
+                  ></Image>
+                  <Text style={styles.serviceName}>لقاح كورونا</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.boxContainer}>
               <TouchableOpacity>
-               <View style={styles.box}>
-               <Image style={styles.logo} source={require('../assets/icons/active/Vaccine.png')}></Image>
-               <Text style={styles.serviceName}> لقاح كورونا</Text>  
-               </View>
-               </TouchableOpacity>
-           </View>
-           <View style={styles.boxContainer}>
+                <View style={styles.box}>
+                  <Image
+                    style={styles.logo}
+                    source={require('../assets/icons/active/healthPassport.png')}
+                  ></Image>
+                  <Text style={styles.serviceName}>الجواز الصحي</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.boxContainer}>
               <TouchableOpacity>
-               <View style={styles.box}>
-               <Image style={styles.logo} source={require('../assets/icons/active/healthPassport.png')}></Image>
-               <Text style={styles.serviceName}>  الجواز الصحي</Text>  
-               </View>
-               </TouchableOpacity>
-           </View>
-           <View style={styles.boxContainer}>
-              <TouchableOpacity>
-               <View style={styles.box}>
-               <Image style={styles.logo} source={require('../assets/icons/active/organDonation.png')}></Image>
-               <Text style={styles.serviceName}> التبرع بالاعضاء</Text>  
-               </View>
-               </TouchableOpacity>
-           </View>
-  </ScrollView>
-</View>
+                <View style={styles.box}>
+                  <Image
+                    style={styles.logo}
+                    source={require('../assets/icons/active/organDonation.png')}
+                  ></Image>
+                  <Text style={styles.serviceName}>التبرع بالاعضاء</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </ScrollView>
+        </View>
+        <View style={styles.warning}>
+          <Text style={styles.warningTitle}>Warning</Text>
+          <Text style={styles.warningBody}>
+            We strongly encourage to download "Tabaud" App that alerts when
+            contact with someone infected by Covid 19 and safe privacy, Protect
+            your community by downloading the App.
+          </Text>
+          <Image srouce={bg} style={styles.warningImg}></Image>
+        </View>
       </View>
-    </View>
-  );
+    </ScrollView>
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#0F1217',    
+    flexGrow: 1,
+    backgroundColor: '#121212',
     alignItems: 'center',
     justifyContent: 'center',
-    color : 'white',
+    color: 'white',
+  },
+  wrapper: {
+    flex: 1,
   },
   textDetails: {
-     color: 'white', 
-     fontSize: 13,
-     marginRight:26,
-     marginLeft:10,
-    //  marginLeft:10,
-     textAlign:"right",
-     lineHeight:35,
-     
-  }, 
-
-  UpdateDetails:
-  {
-    color: 'white', 
-     fontSize: 11.5,
-     marginRight:26,
-     marginLeft:10,
-    //  marginLeft:10,
-     textAlign:"right",
-     lineHeight:35
-  },
-  textHead:{
     color: 'white',
-    textAlign:"right",
+    fontSize: 13,
+    marginRight: 20,
+    marginLeft: 10,
+    textAlign: 'right',
+    lineHeight: 35,
+  },
+
+  UpdateDetails: {
+    color: 'white',
+    fontSize: 11.5,
+    marginRight: 20,
+    marginLeft: 10,
+    //  marginLeft:10,
+    textAlign: 'right',
+    lineHeight: 35,
+  },
+  textHead: {
+    color: 'white',
+    textAlign: 'right',
     fontSize: 18,
-    marginRight:20,
-    fontWeight:'bold',
+    marginRight: 20,
+    fontWeight: 'bold',
   },
   userName: {
     color: '#23AA9C',
-    textAlign:"center",
-    paddingTop:10,
-    fontSize:23
+    textAlign: 'center',
+    marginTop: 30,
+    fontSize: 25,
+    fontWeight: 'bold',
   },
 
-  profile:{
-    width: 300,
-    height: 200,
-    marginRight:15,
-    marginLeft:15,
+  profile: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 15,
+    marginLeft: 15,
   },
-  avatarImage:{
-    width: 80,
-    height: 80,
-    alignSelf:"center",
-    marginTop:5
+  avatarImage: {
+    width: 128,
+    height: 128,
+    alignSelf: 'center',
+    marginTop: 5,
   },
-  card:{
-    backgroundColor:"green",
-    flexDirection:'row',
+  card: {
+    backgroundColor: 'green',
+    flexDirection: 'row',
     borderRadius: 10,
-    // padding: 20,
-    justifyContent:'space-between',
-    alignItems:'center',
-    marginTop:20,
-    paddingVertical:20,
-    paddingHorizontal:20,
-    width: 350,
-    height: 150
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginVertical: 40,
+    paddingVertical: 20,
+    paddingHorizontal: 20,
+    width: '85%',
+    height: 110,
   },
-  qrImage:{
+  qrImage: {
     width: 80,
     height: 80,
-    marginLeft:-60 ,
-    marginRight:-6 ,
+    paddingHorizontal: 20,
   },
 
-  alarm:{
+  alarm: {
     width: 40,
     height: 40,
     alignSelf: 'flex-start',
+    marginTop: 40,
+    marginBottom: 20,
+    marginLeft: 15,
   },
-  wrapper:{
-    marginRight:10,
-    marginLeft:10,
+  wrapper: {
+    marginHorizontal: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  refreshIcon:{
-    width: 15,
-    height: 15,
-    marginBottom:8
+  refreshIcon: {
+    width: 25,
+    height: 25,
+    marginBottom: 8,
   },
-  profileContainer:{
-    justifyContent: "center",
-    alignItems: 'center'
+  profileContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  cardText:{
+  cardText: {
     width: 240,
-    marginLeft:-60,
   },
-  services:
-  {
-    flexDirection:'row',
-    justifyContent:'space-between',
+  services: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     marginTop: 20,
-    marginHorizontal: 8
   },
 
-  textHeadColor:{
-    color:'#23AA9C',
-    fontSize:23
+  textHeadColor: {
+    color: '#23AA9C',
+    fontSize: 23,
   },
-  text:
-  {
+  text: {
     color: '#fff',
   },
-  servicesIcon:
-  {
+  servicesIcon: {
     height: 20,
     width: 15,
   },
-  showAll:
-  {
-    flexDirection:'row',
-    justifyContent:'space-between',
+  showAll: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingRight: 75,
   },
-  textShowAll:{
+  textShowAll: {
     color: 'gray',
-    marginLeft:10
+    marginLeft: 10,
   },
-  box:{
-    backgroundColor: "#1C1B1B",
-    width:83,
-    height:140,
-    margin:8,
-    borderRadius:15,      
+  box: {
+    backgroundColor: '#1C1B1B',
+    width: 83,
+    height: 140,
+    margin: 8,
+    borderRadius: 15,
   },
-  logo:{
-    height:45,
-    width:45,
-    alignSelf:"center",
-    marginTop:25,
-},
-  serviceName:{
-      flex:1,
-      color:"white",
-      marginTop:20,
-      fontSize:13,
-      alignSelf:"center",
-      alignItems:"center",
-      textAlign:'center'
+  logo: {
+    height: 45,
+    width: 45,
+    alignSelf: 'center',
+    marginTop: 25,
   },
-  service:{
-      color:"#6b6a6b",
-      alignSelf:"flex-end",
-      fontSize:25,
+  serviceName: {
+    flex: 1,
+    color: 'white',
+    marginTop: 20,
+    fontSize: 13,
+    alignSelf: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
   },
-  boxContainer:{
-  flexDirection:"row-reverse",
-  justifyContent:"flex-start",
-  marginBottom:18,
-  flexWrap:"wrap",
+  service: {
+    color: '#6b6a6b',
+    alignSelf: 'flex-end',
+    fontSize: 25,
   },
-  servicesDetails:
-  {
-    flexDirection:'row',
+  boxContainer: {
+    flexDirection: 'row-reverse',
+    justifyContent: 'flex-start',
+    marginVertical: 18,
+    flexWrap: 'wrap',
+  },
+  servicesDetails: {
+    flexDirection: 'row',
   },
   background: {
     position: 'absolute',
@@ -293,7 +343,25 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     height: 300,
-  }
-
-});
-
+  },
+  warning: {
+    backgroundColor: '#A1363B',
+    marginHorizontal: 10,
+    marginVertical: 40,
+    padding: 15,
+    borderRadius: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  warningTitle: {
+    fontSize: 20,
+    color: 'white',
+    fontWeight: 'bold',
+  },
+  warningBody: {
+    fontSize: 15,
+    color: 'white',
+    marginTop: 10,
+    textAlign: 'center',
+  },
+})
