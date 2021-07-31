@@ -19,8 +19,6 @@
   <a href=""><img src="https://i.stack.imgur.com/y9DpT.jpg" alt="demo"/></a>
 </p>
 
-<br/>
-
 <div id="key-features">
 
 ## Key Features
