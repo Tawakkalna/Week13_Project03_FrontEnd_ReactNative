@@ -9,7 +9,7 @@ import Services from './screens/Services'
 const Tab = createBottomTabNavigator()
 export default function Main() {
   return (
-    <NavigationContainer>
+    <NavigationContainer independent={true}>
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {

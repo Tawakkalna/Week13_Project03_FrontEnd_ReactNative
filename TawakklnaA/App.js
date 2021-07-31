@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { ActivityIndicator, Image, View } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createStackNavigator } from '@react-navigation/stack'
 import Main from './Main'
+import Login from './screens/Login'
 
 const Tab = createBottomTabNavigator()
 export default function App() {
   const [loading, setLoading] = useState(() => true)
+  const Stack = createStackNavigator()
 
   useEffect(() => {
     setTimeout(() => {
@@ -28,6 +32,11 @@ export default function App() {
     )
   }
   return (
-    <Main></Main>
+    <NavigationContainer independent={true}>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Login" component={Login}/>
+        <Stack.Screen name="Main" component={Main} options={{ headerShown: false }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
