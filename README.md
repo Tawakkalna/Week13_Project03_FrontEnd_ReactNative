@@ -67,7 +67,8 @@ npm start
 
 ## Tech Stack
 
-- [React Native](https://reactnative.dev/docs/getting-started)
+<a href="https://reactnative.dev/docs/getting-started" title="React Native"><img src="https://img.icons8.com/color/96/000000/react-native.png" alt="React Native" width="21px" height="21px"></a> <strong>React Native</strong>
+
 
 ### Core Dependencies
 
