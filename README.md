@@ -28,7 +28,6 @@
 - Official Design
 
 </div>
-<br/>
 
 <div id="how-to-use">
 
