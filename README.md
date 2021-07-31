@@ -1,22 +1,22 @@
 <h1 align="center">
-<a href=""><img src="https://iconape.com/wp-content/files/uv/378514/svg/378514.svg" alt="Tawakkalna Logo" width="80"/></a>
+<a href=""><img src="https://sajahotels.com/wp-content/uploads/2020/11/Tawakkalna-Logo_1920px-580x420.png" alt="Tawakkalna Logo" width="80"/></a>
 </br>
 
-<a href="https://gittuwaiq.netlify.app/">GitTuwaiq: Web-based GUI for Git</a>
+<a href="">Tawakkalna: React Native</a>
 
 </h1>
-<h4 align="center">Web-based graphical interface for distributed version control system Git.</h4>
+<h4 align="center">Tawakkalna mobile app frontend using React Native</h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#tech-stack">Tech Stack</a> •
   <a href="#license">License</a> •
-  <a href="https://gittuwaiq.netlify.app/">Live</a>
+  <a href="">Live</a>
 </p>
 
 <p align="center">
-  <a href="https://gittuwaiq.netlify.app/"><img src="https://raw.githubusercontent.com/YounesAlturkey/gittuwaiq/main/files/GitTuwaiq.gif" alt="demo"/></a>
+  <a href=""><img src="https://i.stack.imgur.com/y9DpT.jpg" alt="demo"/></a>
 </p>
 
 <br/>
@@ -25,9 +25,9 @@
 
 ## Key Features
 
-- Secure
-- Fast
-- Flexible
+- Intuitive Design
+- Smooth UX/UI
+- Official Design
 
 </div>
 <br/>
@@ -41,19 +41,19 @@ From your command line:
 #### # Clone this repository
 
 ```bash
-git clone https://github.com/YounesAlturkey/gittuwaiq.git
+git clone https://github.com/Tawakkalna/react-native.git
 ```
 
 #### # Go into the frontend directory
 
 ```bash
-cd gittuwaiq/frontend
+cd react-native/TawakklnaA
 ```
 
 #### # Install the dependencies
 
 ```bash
-npm install
+yarn install
 ```
 
 #### # Run the app
@@ -70,19 +70,11 @@ npm start
 
 ## Tech Stack
 
-### <a href="https://gittuwaiq-api.azurewebsites.net/swagger/index.html">Backend</a>
-
-- .NET Core 5 Web API
-- Entity Framework - Code First Approach
-- Microsoft SQL Database
-
-### <a href="https://gittuwaiq.netlify.app/">Frontend</a>
-
-- React
+- [React Native](https://reactnative.dev/docs/getting-started)
 
 ### Core Dependencies
 
-- [LibGit2Sharp](https://github.com/libgit2/libgit2sharp)
+- [Expo framework](https://docs.expo.dev/index.html)
 
 </div>
 
@@ -94,7 +86,7 @@ npm start
 
 ## License
 
-[MIT](https://github.com/YounesAlturkey/gittuwaiq/blob/main/files/LICENSE.md)
+[MIT]()
 
 </div>
 
@@ -102,21 +94,32 @@ npm start
 
 ## Developers
 
+
+> Fatimah Alqhtany ➝ [@FatmahAlqhtany](https://github.com/FatmahAlqhtany)
+
 > Riyad Alghamdi ➝ [@1Riyad](https://github.com/1Riyad)
 
-> Adel Kalu ➝ [@AdelKalu](https://github.com/AdelKalu)
+> Abdulaziz Almohammadi ➝ [@AbdulazizAlmohammadi](https://github.com/AbdulazizAlmohammadi)
 
-> Faisal Alsagri ➝ [@FaisalAlsagri](https://github.com/FaisalAlsagri)
+> Albandry AlQaseemi ➝ [@AlbandryAlQaseemi](https://github.com/AlbandryAlQaseemi)
 
-> Ibrahim Alobaysi ➝ [@ibra0022](https://github.com/ibra0022)
+> Amal Alaqel ➝ [@Amal-Al-aqel](https://github.com/Amal-Al-aqel)
 
-> Abdullah AL Haif ➝ [@Abdullah-ALHaif](https://github.com/Abdullah-ALHaif)
+> Amal Almutairi ➝ [@Amal-Almutairi](https://github.com/Amal-Almutairi)
 
-> Abdulmajeed Almaymuni ➝ [@Abdulmajeed-Almaymuni](https://github.com/Abdulmajeed-Almaymuni)
+> Arwa Wanla ➝ [@ArwaWanla](https://github.com/ArwaWanla)
 
-> Mansour Aldundur ➝ [@aldundur-Mansour](https://github.com/aldundur-Mansour)
+> Batool Alghamdi ➝ [@batool-alghamdi](https://github.com/batool-alghamdi)
 
-> Abdulrahman Bin Maneea ➝ [@AWManeea](https://github.com/AWManeea)
+> Reema Alyousef ➝ [@Reema3Alyousef](https://github.com/Reema3Alyousef)
+
+> Rawabe Alshaduki ➝ [@RawabeT](https://github.com/RawabeT)
+
+> Samirah Alhusayni ➝ [@SamirahAlhusayni](https://github.com/SamirahAlhusayni)
+
+> Reham Alanazi ➝ [@Reham Alanazi]()
+
+> Samirah Alhusayni ➝ [@SamirahAlhusayni](https://github.com/SamirahAlhusayni)
 
 > Younes Alturkey ➝ [@younes-alturkey](https://github.com/younes-alturkey)
 
