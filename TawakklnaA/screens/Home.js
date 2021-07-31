@@ -10,6 +10,7 @@ import {
   Dimensions,
 } from 'react-native'
 import bg from '../assets/TAEWAKALNA_BG.png'
+import tabaud from '../assets/tabaud.png'
 import avatar from '../assets/user.png'
 import qr from '../assets/qr-code.png'
 import alarm from '../assets/icons/active/alarm.png'
@@ -118,15 +119,6 @@ export default function Home() {
               </TouchableOpacity>
             </View>
 
-            {/* <View style={styles.boxContainer}>
-        <TouchableOpacity>
-         <View style={styles.box}>
-         <Image style={styles.logo} source={require('../assets/icons/active/mobileNumber.png')}></Image>
-         <Text style={styles.serviceName}> تعريف رقم الجوال</Text>  
-         </View>
-         </TouchableOpacity>
-     </View> */}
-
             <View style={styles.boxContainer}>
               <TouchableOpacity>
                 <View style={styles.box}>
@@ -169,7 +161,7 @@ export default function Home() {
             contact with someone infected by Covid 19 and safe privacy, Protect
             your community by downloading the App.
           </Text>
-          <Image srouce={bg} style={styles.warningImg}></Image>
+          <Image source={tabaud} style={styles.warningImg} />
         </View>
       </View>
     </ScrollView>
@@ -186,6 +178,8 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   textDetails: {
     color: 'white',
@@ -201,7 +195,6 @@ const styles = StyleSheet.create({
     fontSize: 11.5,
     marginRight: 20,
     marginLeft: 10,
-    //  marginLeft:10,
     textAlign: 'right',
     lineHeight: 35,
   },
@@ -277,7 +270,9 @@ const styles = StyleSheet.create({
   },
   services: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '90%',
     marginTop: 20,
   },
 
@@ -295,7 +290,7 @@ const styles = StyleSheet.create({
   showAll: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingRight: 75,
+    paddingRight: 125,
   },
   textShowAll: {
     color: 'gray',
@@ -325,7 +320,6 @@ const styles = StyleSheet.create({
   },
   service: {
     color: '#6b6a6b',
-    alignSelf: 'flex-end',
     fontSize: 25,
   },
   boxContainer: {
@@ -363,5 +357,10 @@ const styles = StyleSheet.create({
     color: 'white',
     marginTop: 10,
     textAlign: 'center',
+  },
+  warningImg: {
+    width: 66,
+    height: 22,
+    margin: 10,
   },
 })
