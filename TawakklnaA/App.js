@@ -7,6 +7,7 @@ import Main from "./Main";
 import Login from "./screens/Login";
 import store from "./redux/store";
 import { Provider } from "react-redux";
+import HealthPassport from "./screens/services/HealthPassport";
 
 const Tab = createBottomTabNavigator();
 export default function App() {
@@ -38,6 +39,7 @@ export default function App() {
       <NavigationContainer independent={true}>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="HealthPassport" component={HealthPassport} />
           <Stack.Screen
             name="Main"
             component={Main}

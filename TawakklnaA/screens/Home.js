@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   StyleSheet,
   Text,
@@ -8,19 +8,22 @@ import {
   ImageBackground,
   ScrollView,
   Dimensions,
-} from 'react-native'
-import bg from '../assets/TAEWAKALNA_BG.png'
-import tabaud from '../assets/tabaud.png'
-import avatar from '../assets/user.png'
-import qr from '../assets/qr-code.png'
-import alarm from '../assets/icons/active/alarm.png'
-import refresh from '../assets/icons/active/refresh.png'
-import arrow from '../assets/icons/active/next.png'
-import { LinearGradient } from 'expo-linear-gradient'
+} from "react-native";
+import bg from "../assets/TAEWAKALNA_BG.png";
+import tabaud from "../assets/tabaud.png";
+import avatar from "../assets/user.png";
+import qr from "../assets/qr-code.png";
+import alarm from "../assets/icons/active/alarm.png";
+import refresh from "../assets/icons/active/refresh.png";
+import arrow from "../assets/icons/active/next.png";
+import { LinearGradient } from "expo-linear-gradient";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Home() {
-  const window = Dimensions.get('window')
-  const ratio = window.width / 500
+  const window = Dimensions.get("window");
+  const ratio = window.width / 500;
+
+  const user = useSelector((state) => state.user);
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -37,12 +40,12 @@ export default function Home() {
             resizeMode="cover"
           >
             <Image source={avatar} style={styles.avatarImage} />
-            <Text style={styles.userName}>فيّ العتيبي</Text>
+            <Text style={styles.userName}>{user.user_info.name_ar}</Text>
           </ImageBackground>
         </View>
         <LinearGradient
           // Background Linear Gradient
-          colors={['rgb(6,74,34)', 'rgb(12,107,51)']}
+          colors={["rgb(6,74,34)", "rgb(12,107,51)"]}
           style={styles.card}
         >
           {/* <View style={styles.refreshIcon}></View> */}
@@ -72,13 +75,13 @@ export default function Home() {
           <Image />
         </View>
         <View style={styles.servicesDetails}>
-          <ScrollView horizontal={true} style={{ width: '90%' }}>
+          <ScrollView horizontal={true} style={{ width: "90%" }}>
             <View style={styles.boxContainer}>
               <TouchableOpacity>
                 <View style={styles.box}>
                   <Image
                     style={styles.logo}
-                    source={require('../assets/icons/active/QrCode.png')}
+                    source={require("../assets/icons/active/QrCode.png")}
                   ></Image>
                   <Text style={styles.serviceName}> باركود زيارد تجمع</Text>
                 </View>
@@ -89,7 +92,7 @@ export default function Home() {
                 <View style={styles.box}>
                   <Image
                     style={styles.logo}
-                    source={require('../assets/icons/active/Test.png')}
+                    source={require("../assets/icons/active/Test.png")}
                   ></Image>
                   <Text style={styles.serviceName}> فحص كورونا</Text>
                 </View>
@@ -101,7 +104,7 @@ export default function Home() {
                 <View style={styles.box}>
                   <Image
                     style={styles.logo}
-                    source={require('../assets/icons/active/id.png')}
+                    source={require("../assets/icons/active/id.png")}
                   ></Image>
                   <Text style={styles.serviceName}> بطاقة الوضع الصحي</Text>
                 </View>
@@ -112,7 +115,7 @@ export default function Home() {
                 <View style={styles.box}>
                   <Image
                     style={styles.logo}
-                    source={require('../assets/icons/active/familySponsored.png')}
+                    source={require("../assets/icons/active/familySponsored.png")}
                   ></Image>
                   <Text style={styles.serviceName}> بطاقة الوضع الصحي</Text>
                 </View>
@@ -124,7 +127,7 @@ export default function Home() {
                 <View style={styles.box}>
                   <Image
                     style={styles.logo}
-                    source={require('../assets/icons/active/Vaccine.png')}
+                    source={require("../assets/icons/active/Vaccine.png")}
                   ></Image>
                   <Text style={styles.serviceName}>لقاح كورونا</Text>
                 </View>
@@ -135,7 +138,7 @@ export default function Home() {
                 <View style={styles.box}>
                   <Image
                     style={styles.logo}
-                    source={require('../assets/icons/active/healthPassport.png')}
+                    source={require("../assets/icons/active/healthPassport.png")}
                   ></Image>
                   <Text style={styles.serviceName}>الجواز الصحي</Text>
                 </View>
@@ -146,7 +149,7 @@ export default function Home() {
                 <View style={styles.box}>
                   <Image
                     style={styles.logo}
-                    source={require('../assets/icons/active/organDonation.png')}
+                    source={require("../assets/icons/active/organDonation.png")}
                   ></Image>
                   <Text style={styles.serviceName}>التبرع بالاعضاء</Text>
                 </View>
@@ -165,76 +168,76 @@ export default function Home() {
         </View>
       </View>
     </ScrollView>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: '#121212',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: 'white',
+    backgroundColor: "#121212",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "white",
   },
   wrapper: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   textDetails: {
-    color: 'white',
+    color: "white",
     fontSize: 13,
     marginRight: 20,
     marginLeft: 10,
-    textAlign: 'right',
+    textAlign: "right",
     lineHeight: 35,
   },
 
   UpdateDetails: {
-    color: 'white',
+    color: "white",
     fontSize: 11.5,
     marginRight: 20,
     marginLeft: 10,
-    textAlign: 'right',
+    textAlign: "right",
     lineHeight: 35,
   },
   textHead: {
-    color: 'white',
-    textAlign: 'right',
+    color: "white",
+    textAlign: "right",
     fontSize: 18,
     marginRight: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   userName: {
-    color: '#23AA9C',
-    textAlign: 'center',
+    color: "#23AA9C",
+    textAlign: "center",
     marginTop: 30,
     fontSize: 25,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 
   profile: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginRight: 15,
     marginLeft: 15,
   },
   avatarImage: {
     width: 128,
     height: 128,
-    alignSelf: 'center',
+    alignSelf: "center",
     marginTop: 5,
   },
   card: {
-    backgroundColor: 'green',
-    flexDirection: 'row',
+    backgroundColor: "green",
+    flexDirection: "row",
     borderRadius: 10,
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    justifyContent: "space-between",
+    alignItems: "center",
     marginVertical: 40,
     paddingVertical: 20,
     paddingHorizontal: 20,
-    width: '85%',
+    width: "85%",
     height: 110,
   },
   qrImage: {
@@ -246,15 +249,15 @@ const styles = StyleSheet.create({
   alarm: {
     width: 40,
     height: 40,
-    alignSelf: 'flex-start',
+    alignSelf: "flex-start",
     marginTop: 40,
     marginBottom: 20,
     marginLeft: 15,
   },
   wrapper: {
     marginHorizontal: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   refreshIcon: {
     width: 25,
@@ -262,42 +265,42 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   profileContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   cardText: {
     width: 240,
   },
   services: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '90%',
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "90%",
     marginTop: 20,
   },
 
   textHeadColor: {
-    color: '#23AA9C',
+    color: "#23AA9C",
     fontSize: 23,
   },
   text: {
-    color: '#fff',
+    color: "#fff",
   },
   servicesIcon: {
     height: 20,
     width: 15,
   },
   showAll: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     paddingRight: 125,
   },
   textShowAll: {
-    color: 'gray',
+    color: "gray",
     marginLeft: 10,
   },
   box: {
-    backgroundColor: '#1C1B1B',
+    backgroundColor: "#1C1B1B",
     width: 83,
     height: 140,
     margin: 8,
@@ -306,61 +309,61 @@ const styles = StyleSheet.create({
   logo: {
     height: 45,
     width: 45,
-    alignSelf: 'center',
+    alignSelf: "center",
     marginTop: 25,
   },
   serviceName: {
     flex: 1,
-    color: 'white',
+    color: "white",
     marginTop: 20,
     fontSize: 13,
-    alignSelf: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
+    alignSelf: "center",
+    alignItems: "center",
+    textAlign: "center",
   },
   service: {
-    color: '#6b6a6b',
+    color: "#6b6a6b",
     fontSize: 25,
   },
   boxContainer: {
-    flexDirection: 'row-reverse',
-    justifyContent: 'flex-start',
+    flexDirection: "row-reverse",
+    justifyContent: "flex-start",
     marginVertical: 18,
-    flexWrap: 'wrap',
+    flexWrap: "wrap",
   },
   servicesDetails: {
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   background: {
-    position: 'absolute',
+    position: "absolute",
     left: 0,
     right: 0,
     top: 0,
     height: 300,
   },
   warning: {
-    backgroundColor: '#A1363B',
+    backgroundColor: "#A1363B",
     marginHorizontal: 10,
     marginVertical: 40,
     padding: 15,
     borderRadius: 15,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   warningTitle: {
     fontSize: 20,
-    color: 'white',
-    fontWeight: 'bold',
+    color: "white",
+    fontWeight: "bold",
   },
   warningBody: {
     fontSize: 15,
-    color: 'white',
+    color: "white",
     marginTop: 10,
-    textAlign: 'center',
+    textAlign: "center",
   },
   warningImg: {
     width: 66,
     height: 22,
     margin: 10,
   },
-})
+});

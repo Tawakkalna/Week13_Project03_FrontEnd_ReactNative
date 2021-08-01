@@ -1,72 +1,79 @@
-import React from 'react'
-import {  Image } from 'react-native'
-import { NavigationContainer } from '@react-navigation/native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { createStackNavigator } from '@react-navigation/stack';
-import Home from './screens/Home'
-import Profile from './screens/Profile'
-import Services from './screens/Services'
-import HealthPassport from "./screens/services/HealthPassport"
+import React from "react";
+import { Image } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
+import Home from "./screens/Home";
+import Profile from "./screens/Profile";
+import Services from "./screens/Services";
+import HealthPassport from "./screens/services/HealthPassport";
 
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator();
 export default function Main() {
   return (
     <NavigationContainer independent={true}>
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
-            let iconName
+            let iconName;
 
-            if (route.name === 'Home') {
+            if (route.name === "Home") {
               iconName = focused
-                ? require('./assets/icons/active/home.png')
-                : require('./assets/icons/notActive/home-gray.png')
-            } else if (route.name === 'Profile') {
+                ? require("./assets/icons/active/home.png")
+                : require("./assets/icons/notActive/home-gray.png");
+            } else if (route.name === "Profile") {
               iconName = focused
-                ? require('./assets/icons/active/myAccount.png')
-                : require('./assets/icons/notActive/myAccount-gray.png')
-            } else if (route.name === 'Services') {
+                ? require("./assets/icons/active/myAccount.png")
+                : require("./assets/icons/notActive/myAccount-gray.png");
+            } else if (route.name === "Services") {
               iconName = focused
-                ? require('./assets/icons/active/services.png')
-                : require('./assets/icons/notActive/services-gray.png')
-            } else if (route.name === 'Dashboard') {
+                ? require("./assets/icons/active/services.png")
+                : require("./assets/icons/notActive/services-gray.png");
+            } else if (route.name === "Dashboard") {
               iconName = focused
-                ? require('./assets/icons/active/dashboard.png')
-                : require('./assets/icons/notActive/dashboard-gray.png')
-            } else if (route.name === 'Wallet') {
+                ? require("./assets/icons/active/dashboard.png")
+                : require("./assets/icons/notActive/dashboard-gray.png");
+            } else if (route.name === "Wallet") {
               iconName = focused
-                ? require('./assets/icons/active/wallet.png')
-                : require('./assets/icons/notActive/wallet-gray.png')
+                ? require("./assets/icons/active/wallet.png")
+                : require("./assets/icons/notActive/wallet-gray.png");
+            } else {
             }
-            else{
-              
-            }
-
 
             // You can return any component that you like here!
-            return <Image source={iconName} style={{ width: 25, height: 25 }} />
+            return (
+              <Image source={iconName} style={{ width: 25, height: 25 }} />
+            );
           },
         })}
         tabBarOptions={{
-          activeTintColor: '#23AA9C',
-          inactiveTintColor: '#AFAFAF',
+          activeTintColor: "#23AA9C",
+          inactiveTintColor: "#AFAFAF",
           style: {
-            backgroundColor: '#191b1c',
+            backgroundColor: "#191b1c",
             borderTopWidth: 0,
           },
         }}
       >
         <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Services" component={Services} />
+        <Tab.Screen name="Services" component={ServicesRoot} />
         <Tab.Screen name="Wallet" component={Home} />
         <Tab.Screen name="Dashboard" component={Home} />
         <Tab.Screen name="Profile" component={Profile} />
-
-        {/* Services */}
-        <Tab.Screen  name="HealthPassport"   options={{showIcon: false,showLabel: false,tabBarVisible: false}} component={HealthPassport}  />
-
       </Tab.Navigator>
-      
     </NavigationContainer>
-  )
+  );
+}
+
+export function ServicesRoot() {
+  const Stack = createStackNavigator();
+
+  return (
+    <NavigationContainer independent={true}>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Services" component={Services} />
+        <Stack.Screen name="HealthPassport" component={HealthPassport} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
