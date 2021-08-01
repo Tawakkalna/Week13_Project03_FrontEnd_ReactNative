@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <a href=""><img src="https://github.com/Tawakkalna/react-native/blob/main/TawakklnaA/assets/demo.gif" height="600" alt="demo"/></a>
+  <a href=""><img src="https://github.com/Tawakkalna/react-native/blob/main/TawakklnaA/assets/demo-latest.gif" height="600" alt="demo"/></a>
 </p>
 
 <div id="key-features">
