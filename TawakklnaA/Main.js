@@ -17,23 +17,23 @@ export default function Main() {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
-            if (route.name === "Home") {
+            if (route.name === "الرئيسية") {
               iconName = focused
                 ? require("./assets/icons/active/home.png")
                 : require("./assets/icons/notActive/home-gray.png");
-            } else if (route.name === "Profile") {
+            } else if (route.name === "حسابي") {
               iconName = focused
                 ? require("./assets/icons/active/myAccount.png")
                 : require("./assets/icons/notActive/myAccount-gray.png");
-            } else if (route.name === "Services") {
+            } else if (route.name === "الخدمات") {
               iconName = focused
                 ? require("./assets/icons/active/services.png")
                 : require("./assets/icons/notActive/services-gray.png");
-            } else if (route.name === "Dashboard") {
+            } else if (route.name === "لوحة البيانات") {
               iconName = focused
                 ? require("./assets/icons/active/dashboard.png")
                 : require("./assets/icons/notActive/dashboard-gray.png");
-            } else if (route.name === "Wallet") {
+            } else if (route.name === "المحفظة الرقمية") {
               iconName = focused
                 ? require("./assets/icons/active/wallet.png")
                 : require("./assets/icons/notActive/wallet-gray.png");
@@ -55,11 +55,11 @@ export default function Main() {
           },
         }}
       >
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Services" component={ServicesRoot} />
-        <Tab.Screen name="Wallet" component={Home} />
-        <Tab.Screen name="Dashboard" component={Home} />
-        <Tab.Screen name="Profile" component={Profile} />
+        <Tab.Screen name="حسابي" component={Profile} />
+        <Tab.Screen name="لوحة البيانات" component={Home} />
+        <Tab.Screen name="المحفظة الرقمية" component={Home} />
+        <Tab.Screen name="الخدمات" component={ServicesRoot} />
+        <Tab.Screen name="الرئيسية" component={Home} />
       </Tab.Navigator>
     </NavigationContainer>
   );
