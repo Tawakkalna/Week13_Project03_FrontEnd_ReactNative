@@ -111,8 +111,6 @@ npm start
 
 > Reham Alanazi ➝ [@Reham Alanazi]()
 
-> Samirah Alhusayni ➝ [@SamirahAlhusayni](https://github.com/SamirahAlhusayni)
-
 > Younes Alturkey ➝ [@younes-alturkey](https://github.com/younes-alturkey)
 
 </div>
