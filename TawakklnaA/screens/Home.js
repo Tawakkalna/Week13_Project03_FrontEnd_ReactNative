@@ -39,7 +39,13 @@ export default function Home() {
             imageStyle={{ borderRadius: 10 }}
             resizeMode="cover"
           >
-            <Image source={avatar} style={styles.avatarImage} />
+            <Image
+              source={
+                //avatar
+                { uri: user.user_info.profile_pic }
+              }
+              style={styles.avatarImage}
+            />
             <Text style={styles.userName}>{user.user_info.name_ar}</Text>
           </ImageBackground>
         </View>
@@ -227,6 +233,9 @@ const styles = StyleSheet.create({
     height: 128,
     alignSelf: "center",
     marginTop: 5,
+    borderRadius: 100,
+    borderWidth: 4,
+    borderColor: "#23AA9C",
   },
   card: {
     backgroundColor: "green",
