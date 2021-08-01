@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text,StyleSheet, ScrollView,Image, TouchableOpacity } from 'react-native'
 
 
-export default function Services() {
+export default function Services({ navigation }) {
   
     return (
         <View style={{flex:1, backgroundColor:"black"}}>
@@ -65,7 +65,9 @@ export default function Services() {
                  <Text style={styles.serviceName}>اسأل عن مساعدة</Text>  
                </View>
                </TouchableOpacity>
-               <TouchableOpacity>
+               <TouchableOpacity
+                onPress={() => navigation.navigate('HealthPassport')}
+               >
                <View style={styles.box}>
                <Image style={styles.logo} source={require('../assets/icons/active/healthPassport.png')}></Image>
                  <Text style={styles.serviceName}>الجواز الصحي</Text>  

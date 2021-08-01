@@ -36,6 +36,7 @@ export default function App() {
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Login" component={Login}/>
         <Stack.Screen name="Main" component={Main} options={{ headerShown: false }}/>
+        {/* <Stack.Screen name="HealthPassport" component={HealthPassport} options={{ headerShown: false }}/> */}
       </Stack.Navigator>
     </NavigationContainer>
   )

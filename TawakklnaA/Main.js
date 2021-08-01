@@ -2,9 +2,11 @@ import React from 'react'
 import {  Image } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createStackNavigator } from '@react-navigation/stack';
 import Home from './screens/Home'
 import Profile from './screens/Profile'
 import Services from './screens/Services'
+import HealthPassport from "./screens/services/HealthPassport"
 
 const Tab = createBottomTabNavigator()
 export default function Main() {
@@ -36,6 +38,10 @@ export default function Main() {
                 ? require('./assets/icons/active/wallet.png')
                 : require('./assets/icons/notActive/wallet-gray.png')
             }
+            else{
+              
+            }
+
 
             // You can return any component that you like here!
             return <Image source={iconName} style={{ width: 25, height: 25 }} />
@@ -55,7 +61,12 @@ export default function Main() {
         <Tab.Screen name="Wallet" component={Home} />
         <Tab.Screen name="Dashboard" component={Home} />
         <Tab.Screen name="Profile" component={Profile} />
+
+        {/* Services */}
+        <Tab.Screen  name="HealthPassport"   options={{showIcon: false,showLabel: false,tabBarVisible: false}} component={HealthPassport}  />
+
       </Tab.Navigator>
+      
     </NavigationContainer>
   )
 }
